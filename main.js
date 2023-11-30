@@ -31,5 +31,28 @@ function submit()
 
 
     document.getElementById("submitButton").style.display = "none";
+    document.getElementById("sortButton").style.display = "inline-block";
+
+
+}
+function sorting()
+{
+    nameOfTheStudentArray.sort();
+    console.log(nameOfTheStudentArray);
+
+    var displayStudentArraySorting = [];
+
+    var lenghtOfNameOfStudentsArray = nameOfTheStudentArray.length;
+    console.log(lenghtOfNameOfStudentsArray);
+
+    for (var k = 0; k < lenghtOfNameOfStudentsArray; k++) 
+    {
+        displayStudentArraySorting.push("<h4>NOME - "+ nameOfTheStudentArray[k] + "</h4>");
+        console.log(displayStudentArraySorting);
+    }
+
+    var removeCommas = displayStudentArraySorting.join(" ");
+    console.log(removeCommas);
+    document.getElementById("displayNameWithoutCommas").innerHTML = removeCommas;
 
 }
